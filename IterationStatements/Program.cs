@@ -9,7 +9,7 @@ namespace IterationStatements
 
         
         
-        //Write a method to check whether a given number is even or odd
+        
         
         //Write a method to check whether a given number is positive or negative
         
@@ -31,6 +31,7 @@ namespace IterationStatements
             DecreaseNumbers();
             NumbersByThree();
             EqualNumbers(5 , 6);
+            EvenOrOdd(12);
 
             //Write a method that will print to the console all numbers 1000 through - 1000 - DONE
             static void DecreaseNumbers()
@@ -40,7 +41,9 @@ namespace IterationStatements
                 for (int i = 1000; i >= -1000; i--)
                 {
                     Console.WriteLine(i);
+                    
                 }
+                Console.WriteLine();
             }
 
             
@@ -52,19 +55,36 @@ namespace IterationStatements
                 for (int i = 3; i < 999; i += 3)
                 {
                     Console.WriteLine(i);
+                    
                 }
+                Console.WriteLine();
             }
 
-            //Write a method to accept two integers as parameterss and check whether they are equal or not
+            //Write a method to accept two integers as parameterss and check whether they are equal or not - DONE
             static void EqualNumbers (int a , int b)
             {
 
                 Console.WriteLine($"Check if a and b are equal: a = {a} and b = {b}");
 
-                string areEqual = (a == b) ? "The numbers are equal" : "The numbers are not equal";
+                string areEqual = (a == b) ? "The numbers are equal." : "The numbers are not equal.";
                 Console.WriteLine(areEqual);
-            }
+                Console.WriteLine();
 
+            }
+            
+
+            //Write a method to check whether a given number is even or odd
+            static void EvenOrOdd(int number)
+            {
+                
+                Console.WriteLine($"Checks if number is even or odd. The number is: {number}");
+
+                string evenOrOdd = (number % 2 == 0) ? "The number is even." : "The number is odd.";
+                Console.WriteLine(evenOrOdd);
+                Console.WriteLine();
+
+            }
+            
         }
     }
 }
