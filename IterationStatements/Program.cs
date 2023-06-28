@@ -17,9 +17,12 @@ namespace IterationStatements
             MeetsVotingAge();
 
             //Heatin Up Section:
+            IntInsideRange();
+            MultiplicationTable();
+
         }
-        //Write a method that will print to the console all numbers 1000 through - 1000 - DONE
-        static void DecreaseNumbers()
+            //Write a method that will print to the console all numbers 1000 through - 1000 - DONE
+            static void DecreaseNumbers()
             {
                 Console.WriteLine("Decreasing numbers from 1,000 to -1,000");
 
@@ -30,7 +33,6 @@ namespace IterationStatements
                 }
                 Console.WriteLine();
             }
-
             
             //Write a method that will print to the console numbers 3 through 999 by 3 each time - DONE
             static void NumbersByThree()
@@ -57,7 +59,6 @@ namespace IterationStatements
 
             }
             
-
             //Write a method to check whether a given number is even or odd
             static void EvenOrOdd(int number)
             {
@@ -109,9 +110,46 @@ namespace IterationStatements
                 
             }
 
-        //Write a method to check if an integer(from the user) is in the range -10 to 10
+            //Write a method to check if an integer(from the user) is in the range -10 to 10
+            static void IntInsideRange()
+            {
+                Console.WriteLine($"Pick a number to determine if it's in the range -10 to 10:");
+                string number = Console.ReadLine();
+
+                int userNumber;
+
+                if (int.TryParse (number, out userNumber)) 
+                {
+            
+                    if (userNumber > 10 || userNumber < -10) 
+                    {
+                        Console.WriteLine("Your number is not within the specified range.");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Your number is between -10 and 10!!");
+                    }
+                Console.WriteLine();
+            }
+                
+
+            
+            }
+
+            //Write a method to display the multiplication table(from 1 to 12) of a given integer
+            static void MultiplicationTable()
+            {
+                int number = 9;
+                
+                for (int i = 1; i <= 12; i++) 
+                {
+                    int product = number * i;
+                    Console.WriteLine($"{number} x {i} = {product}");
+                }
 
 
-        //Write a method to display the multiplication table(from 1 to 12) of a given integer
+                
+            }
     }
 }
