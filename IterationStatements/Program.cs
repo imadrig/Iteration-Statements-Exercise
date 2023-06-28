@@ -5,36 +5,21 @@ namespace IterationStatements
 {
     public class Program
     {
-       
-
-        
-        
-        
-        
-        //Write a method to check whether a given number is positive or negative
-        
-        //Write a method to read the age of a candidate and determine whether they can vote.
-        //Hint: Use Parse or the safer TryParse() for an extra challenge
-        //Parse()
-        //TryParse()
-
-        //Heatin Up Section:
-        //Write a method to check if an integer(from the user) is in the range -10 to 10
-        
-        //Write a method to display the multiplication table(from 1 to 12) of a given integer
-
-
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
             //LukeWarm Section: Create methods below
             DecreaseNumbers();
             NumbersByThree();
-            EqualNumbers(5 , 6);
+            EqualNumbers(5, 6);
             EvenOrOdd(12);
+            PositiveOrNegative(-13);
+            MeetsVotingAge();
 
-            //Write a method that will print to the console all numbers 1000 through - 1000 - DONE
-            static void DecreaseNumbers()
+            //Heatin Up Section:
+        }
+        //Write a method that will print to the console all numbers 1000 through - 1000 - DONE
+        static void DecreaseNumbers()
             {
                 Console.WriteLine("Decreasing numbers from 1,000 to -1,000");
 
@@ -84,7 +69,49 @@ namespace IterationStatements
                 Console.WriteLine();
 
             }
-            
-        }
+
+            //Write a method to check whether a given number is positive or negative
+            static void PositiveOrNegative(int number)
+            {
+                Console.WriteLine($"Checks if number is postive or negative. The number is: {number}");
+
+                string postiveOrNegative = (number > 0) ? "The number is postive." : "The number is negative.";
+                Console.WriteLine(postiveOrNegative);
+                Console.WriteLine();
+
+            }
+
+            //Write a method to read the age of a candidate and determine whether they can vote.
+            //Hint: Use Parse or the safer TryParse() for an extra challenge
+            //Parse()
+            //TryParse()
+
+            static void MeetsVotingAge()
+            {
+                
+                Console.WriteLine($"How old are you?");
+                string age = Console.ReadLine();
+
+                int userAge;
+
+                if (int.TryParse (age, out userAge))
+                {
+                    if (userAge >= 18)
+                    {
+                        Console.WriteLine("You are old enough to vote.");
+                    }
+                    else 
+                    {
+                        Console.WriteLine("You are NOT old enough to vote.");
+                    }
+                    Console.WriteLine();
+                }
+                
+            }
+
+        //Write a method to check if an integer(from the user) is in the range -10 to 10
+
+
+        //Write a method to display the multiplication table(from 1 to 12) of a given integer
     }
 }
